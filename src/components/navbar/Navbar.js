@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import styles from "./Navbar.module.css"; bu neden olmadi arastiralim guzelce ogrenelim tamam ?
+import styles from "./Navbar.module.css";
 const Navbar = () => {
   return (
-    <div className="container">
-      <div className="left">
+    <div className={styles.container}>
+      <div className={styles.left}>
         <Link to="/">Home</Link>
       </div>
 
-      <div className="right">
+      <div className={styles.right}>
         <Link to="/about">About</Link>
         <a
           href="https://github.com/eminbulbul"
