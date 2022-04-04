@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    background-color: red;
+}
+.left{
+    align-items: flex-start;
+}
+.right{
+ align-items: flex-end;
+}
