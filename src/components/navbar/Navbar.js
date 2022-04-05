@@ -20,7 +20,7 @@ const Navbar = () => {
         >
           Github
         </a>
-        <Link to="/login">Login</Link>
+        <Link to="/login">Logout</Link>
       </div>
     </div>
   );
