@@ -1,18 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 const Navbar = () => {
   const homeName = "<Emin/>";
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <Link to="/">
+        <NavLink to="/">
           <span>{homeName}</span>Recipe
-        </Link>
+        </NavLink>
       </div>
 
       <div className={styles.right}>
-        <Link to="/about">About</Link>
+        <NavLink to="/about">About</NavLink>
         <a
           href="https://github.com/eminbulbul"
           rel="noreferrer"
@@ -20,7 +21,7 @@ const Navbar = () => {
         >
           Github
         </a>
-        <Link to="/login">Logout</Link>
+        <NavLink to="/login">Logout</NavLink>
       </div>
     </div>
   );

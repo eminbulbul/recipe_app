@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import styles from "./Login.module.css";
 
 export default function Login() {
+  const handleClick = () => {};
   return (
     <div className={styles.container}>
       <Stack
@@ -30,7 +31,9 @@ export default function Login() {
           variant="filled"
           type="password"
         />
-        <Button variant="contained">LOGIN</Button>
+        <Button onClick={handleClick} variant="contained">
+          LOGIN
+        </Button>
       </Stack>
     </div>
   );
