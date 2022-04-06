@@ -1,11 +1,40 @@
-import React from "react";
-
-const RecipeCard = () => {
-  const APP_ID = "be397a7a";
-  const APP_KEY = "b7714734a6ac97a1ffa5b4b2df436119";
-  const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal}`;
-
-  return <div>RecipeCard</div>;
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { Button, CardActionArea, CardActions } from "@mui/material";
+const RecipeCard = ({ recipe }) => {
+  console.log(recipe);
+  return (
+    <div style={{ display: "flex" }}>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="140"
+            image="/static/images/cards/contemplative-reptile.jpg"
+            alt="green iguana2"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              <p>{recipe.recipe.label}</p>
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            View More
+          </Button>
+        </CardActions>
+      </Card>
+      {/* {recipe[0].recipe.label}
+                <p>{recipe[0].recipe.calories}</p> */}
+    </div>
+  );
 };
-
 export default RecipeCard;
