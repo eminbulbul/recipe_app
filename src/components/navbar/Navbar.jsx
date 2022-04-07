@@ -1,10 +1,27 @@
-
-import React from 'react'
+import React, { useState } from "react";
+import { Hamburger, Logo, Menu, MenuLink, Nav } from "./NavbarStyles";
 
 const Navbar = () => {
+  const [isOpen, setOpen] = useState(false);
   return (
-    <div>READY PROJECT</div>
-  )
-}
+    <Nav>
+      <Logo to="/home">
+        <i>{"<Emin's>"}</i>
+        <span>recipes</span>
+      </Logo>
+      <Hamburger onClick={() => setOpen(!isOpen)}>
+        <span />
+        <span />
+        <span />
+      </Hamburger>
 
-export default Navbar
+      <Menu osman={isOpen}>
+        <MenuLink to="/about">About</MenuLink>
+        <MenuLink to="/github">Github</MenuLink>
+        <MenuLink to="/">Logout</MenuLink>
+      </Menu>
+    </Nav>
+  );
+};
+
+export default Navbar;
