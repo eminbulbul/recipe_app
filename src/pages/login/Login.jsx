@@ -8,15 +8,18 @@ import {
   StyledImg,
   StyledInput,
 } from "./LoginStyles";
+import { useNavigate } from "react-router-dom";
 import meal from "../../assets/meal.svg";
+
 const Login = () => {
+  const navigate = useNavigate();
   const user = {
     username: "user",
   };
   const siteyeGir = (e) => {
     e.preventDefault();
     sessionStorage.setItem("user", JSON.stringify(user));
-    window.location.href = "/home";
+    navigate("/home");
   };
 
   return (
