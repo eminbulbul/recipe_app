@@ -4,4 +4,5 @@ Goal of this project is to make an application that shows recipe recommendations
 This page deployed with netlify >>> https://fromcheffemin.netlify.app/
 
 
-![recipe](https://user-images.githubusercontent.com/93790865/166178272-525594eb-770c-4ec1-be24-ab7aeb645c3e.gif)
+
+![reciper](https://user-images.githubusercontent.com/93790865/166178320-1972e1f9-6395-4b0f-8313-8d3a71ec6f4f.gif)
